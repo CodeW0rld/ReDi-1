@@ -11,7 +11,7 @@ Using the vscode Debugger Demo
 - Stop: stop the debugging
 
 Debug this code to understand what it does and find out what the mysterious variables are!
-Hint: what is the purpose of line 21?
+Hint: what is the purpose of line 21? Line 21 selects the name of the line 19: last_names
 """
 
 last_names = ["Schwarz", "Braun", "Lehmann", "Weiß", "Schneider", "Hell"]
@@ -34,4 +34,3 @@ for name in last_names:
 
 print("Final mystery: Winner is...")
 print(f"{mysterious_variable_2}: {mysterious_variable}")
-Collapse
