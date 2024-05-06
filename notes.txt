@@ -1,0 +1,30 @@
+from collections import deque
+
+class Browser:
+    def __init__(self):
+        self.history = deque()
+        self.stack = []
+    
+    def visit_website(self, website):
+        self.stack.append(website)
+        self.history.append(website)
+        print(f"Visited website: {website}")
+    
+    def go_back(self):
+        if len(self.stack) > 1:
+            self.stack.pop()
+            return self.stack[-1]
+        else:
+            return "Cannot go back further"
+    
+back_button = Browser()
+
+back_button.visit_website("www.youtube.com")
+back_button.visit_website("www.binance.com")
+back_button.visit_website("www.bing.com")
+
+current_page = back_button.go_back()
+print(current_page)
+
+current_page = back_button.go_back()
+print(current_page)
